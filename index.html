@@ -195,6 +195,7 @@
       background: var(--c, var(--purple)); box-shadow: 0 0 0 3px #F6F1FB;
     }
     .task-title { font-weight: 650; white-space: nowrap; }
+    .acct { color: #5C5274; font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: .03em; }
     .task-title.done { color: var(--soft); text-decoration: line-through; }
     .who { color: var(--muted); font-size: 12px; margin-top: 2px; }
     .mini {
@@ -685,13 +686,13 @@
       { name:"成都梵星豪斯", stage:"已沟通", origin:"已沟通", source:"账户类型已经选对。导出无消耗。", date:"2026-11-21", owner:"张子怡" }
     ];
     let TASKS = [
-      { id:"t1", time:"09:00", title:"洁尔阴消耗 -51%", owner:"刘舒杭 · 跃迁 · 日均 3,082", customer:"", pending:true, color:"#7C5CBF" },
-      { id:"t2", time:"10:30", title:"北京中茶消耗 -72%", owner:"直销自助 · 日均 1,285", customer:"", pending:true, color:"#C45B8A" },
-      { id:"t3", time:"13:30", title:"捷护佳消耗 -51%", owner:"直营重点 · 日均 2,396", customer:"", pending:true, color:"#C4A35A" },
-      { id:"t4", time:"15:00", title:"德伟盛消耗 -77%", owner:"郭家欣 · 跃迁 · 日均 562", customer:"", pending:true, color:"#7C5CBF" },
-      { id:"t5", time:"16:00", title:"妙蟹阁消耗 -74%", owner:"郭家欣 · 跃迁 · 首充 2 万", customer:"", pending:true, color:"#6E8BB8" },
-      { id:"t6", time:"16:30", title:"渔舟问月消耗 -61%", owner:"郭家欣 · 跃迁 · 首充 5 万", customer:"", pending:true, color:"#D48BB8" },
-      { id:"t7", time:"17:30", title:"自然堂消耗 -93%", owner:"直营重点 · 日均 140", customer:"", pending:true, color:"#8E86A8" }
+      { id:"t1", time:"09:00", title:"洁尔阴消耗 -51%", account:"93283210", owner:"刘舒杭 · 跃迁 · 日均 3,082", customer:"", pending:true, color:"#7C5CBF" },
+      { id:"t2", time:"10:30", title:"北京中茶消耗 -72%", account:"76252170", owner:"直销自助 · 日均 1,285", customer:"", pending:true, color:"#C45B8A" },
+      { id:"t3", time:"13:30", title:"捷护佳消耗 -51%", account:"55692943", owner:"直营重点 · 日均 2,396", customer:"", pending:true, color:"#C4A35A" },
+      { id:"t4", time:"15:00", title:"德伟盛消耗 -77%", account:"93280253", owner:"郭家欣 · 跃迁 · 日均 562", customer:"", pending:true, color:"#7C5CBF" },
+      { id:"t5", time:"16:00", title:"妙蟹阁消耗 -74%", account:"95035731", owner:"郭家欣 · 跃迁 · 首充 2 万", customer:"", pending:true, color:"#6E8BB8" },
+      { id:"t6", time:"16:30", title:"渔舟问月消耗 -61%", account:"94889376", owner:"郭家欣 · 跃迁 · 首充 5 万", customer:"", pending:true, color:"#D48BB8" },
+      { id:"t7", time:"17:30", title:"自然堂消耗 -93%", account:"77011257", owner:"直营重点 · 日均 140", customer:"", pending:true, color:"#8E86A8" }
     ];
     const REMINDERS = [
       { id:"xiangnong", name:"张家界湘农哥", due:"2026-11-23", when:"10:30", level:"退款", color:"#C45B8A", note:"20 日说没展现、要退款 · 已隔 3 天", fixed:true },
@@ -830,10 +831,10 @@
       document.getElementById("schedule-count").textContent = `(${TASKS.length})`;
       document.getElementById("schedule-list").innerHTML = `<ol class="timeline">${TASKS.map((t) => `<li>
         <time>${t.time}</time><div class="rail"><i style="--c:${t.color}"></i></div>
-        <div><div class="task-title ${t.pending ? "" : "done"}">${esc(t.title)}</div><div class="who-row"><span class="who">${esc(t.owner)}${t.pending ? " · 待确认" : ""}</span>${t.pending ? `<button class="mini" type="button" data-done="${t.id}">完成</button>` : `<span class="who">已安排</span>`}</div></div>
+        <div><div class="task-title ${t.pending ? "" : "done"}">${esc(t.title)}</div><div class="acct">${esc(t.account)}</div><div class="who-row"><span class="who">${esc(t.owner)}${t.pending ? " · 待确认" : ""}</span>${t.pending ? `<button class="mini" type="button" data-done="${t.id}">完成</button>` : `<span class="who">已安排</span>`}</div></div>
       </li>`).join("")}</ol>`;
       document.getElementById("task-list").innerHTML = TASKS.map((t) => `<div class="switch">
-        <div><b class="${t.pending ? "" : "task-title done"}">${t.time} · ${esc(t.title)}</b><div class="who">${esc(t.owner)}</div></div>
+        <div><b class="${t.pending ? "" : "task-title done"}">${t.time} · ${esc(t.title)}</b><div class="acct">${esc(t.account)}</div><div class="who">${esc(t.owner)}</div></div>
         <button class="toggle" type="button" aria-pressed="${t.pending ? "false" : "true"}" data-done="${t.id}" aria-label="${esc(t.title)}"><i></i></button>
       </div>`).join("");
     }

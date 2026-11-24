@@ -420,18 +420,18 @@
           </article>
           <article class="card kpi">
             <div class="kpi-top"><div class="label">已上线客户</div><div class="kpi-ico"><svg class="ico" viewBox="0 0 24 24"><path d="M12 3.5 14.2 8l5 .6-3.7 3.4.9 5L12 14.8 7.6 17l.9-5L4.8 8.6 9.8 8z"/></svg></div></div>
-            <div class="value">557</div>
-            <div class="kpi-foot"><div class="delta" style="color:#5C4E78">近7日有消耗 · 占已充值 18.6%</div></div>
+            <div class="value">552</div>
+            <div class="kpi-foot"><div class="delta" style="color:#5C4E78">近7日有消耗 · 占已充值 18.5%</div></div>
           </article>
           <article class="card kpi">
             <div class="kpi-top"><div class="label">近7日日均消耗</div><div class="kpi-ico"><svg class="ico" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3.5V7M16 3.5V7M4 10h16"/></svg></div></div>
-            <div class="value">¥11.29万</div>
-            <div class="kpi-foot"><div class="delta" style="color:#C45B8A">环比 <b>-19.2%</b></div></div>
+            <div class="value">¥11.12万</div>
+            <div class="kpi-foot"><div class="delta" style="color:#C45B8A">环比 <b>-21.4%</b></div></div>
           </article>
           <article class="card kpi">
             <div class="kpi-top"><div class="label">近7日日均下单</div><div class="kpi-ico"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7.5v9M9.2 9.5h4.2a2.1 2.1 0 0 1 0 4.2H9.2"/></svg></div></div>
-            <div class="value" id="kpi-amount">4,086</div>
-            <div class="kpi-foot"><div class="delta">环比 <b>+14.2%</b></div></div>
+            <div class="value" id="kpi-amount">4,031</div>
+            <div class="kpi-foot"><div class="delta">环比 <b>+12.4%</b></div></div>
           </article>
         </div>
 
@@ -443,7 +443,7 @@
           <article class="card">
             <div class="card-head"><h2>客户分层分析</h2><button class="text-btn" type="button" data-goto="tags">查看详情</button></div>
             <div class="donut-layout" id="donut"></div>
-            <p class="footnote">同一账户只进一档，从 A 到 E。A 是全域通跃迁，或近 7 日日均消耗大于 1,000 元。B 是其余里首充大于 5 万的。C、D、E 再按近 7 日下单次数分。</p>
+            <p class="footnote">同一账户只进一档，从 A 到 E。A 是全域通跃迁，或近 7 日日均消耗大于 1,000 元。B 是其余里首充大于 5 万的。C、D、E 再按近 7 日下单次数分。人数仍是上一版。这份 11 月 17–23 日的表没有首充和跃迁，分层人数没有重算。</p>
           </article>
         </div>
 
@@ -455,7 +455,7 @@
           <article class="card">
             <div class="card-head"><h2>商机看板</h2><button class="text-btn" type="button" data-goto="pipeline">查看全部</button></div>
             <div class="board" id="home-board"></div>
-            <p class="footnote">张子怡 11 月 16–22 日在群里的沟通。群名里的账户对上近 7 日导出，数字是日均消耗。</p>
+            <p class="footnote">张子怡 11 月 23 日在群里的沟通。群名里的账户对上 11 月 17–23 日导出，数字是日均消耗。</p>
           </article>
         </div>
 
@@ -466,13 +466,14 @@
               <div style="display:flex;align-items:center;gap:10px">
                 <div class="legend-inline"><span><i style="background:#CDB6F0"></i>日均消耗（万元）</span><span><i style="background:#6A4EBE;border-radius:99px"></i>日均下单次数</span></div>
                 <select class="select" id="trend-range" aria-label="趋势区间">
+                  <option value="8" selected>含近7日</option>
                   <option value="7">近 7 周</option>
                   <option value="4">近 4 周</option>
                 </select>
               </div>
             </div>
             <div class="chart-box" id="trend" data-trend></div>
-            <p class="footnote">每周从周一开始。柱子是日均消耗，折线是日均下单。11 月 9 日那周日均消耗最高，13.9 万元。</p>
+            <p class="footnote">11 月 16 日及之前按自然周。最后一根 11/17 是近 7 日（到 11 月 23 日），日均消耗 11.1 万元。11 月 9 日那周仍是最高，13.9 万元。</p>
           </article>
           <article class="card" id="reminder-card">
             <div class="card-head"><h2>回访提醒 <span id="reminder-count" style="color:#7D7394;font-weight:650"></span></h2></div>
@@ -506,7 +507,7 @@
 
       <section class="view" id="view-leads">
         <div class="page-head">
-          <div><h1>客户线索</h1><p>张子怡这周在对接、近 7 日还没有跑起来的客户。已有消耗的不放在这里。</p></div>
+          <div><h1>客户线索</h1><p>张子怡 11 月 23 日对接过、近 7 日还没有跑起来的客户。已有消耗的不放在这里。</p></div>
           <div class="filters" id="lead-filters"></div>
         </div>
         <article class="card">
@@ -521,7 +522,7 @@
 
       <section class="view" id="view-tasks">
         <div class="page-head">
-          <div><h1>跟进任务</h1><p>今天这 7 个，优先是近 7 日消耗环比下跌超过 50% 的客户，以及全域通跃迁客户。勾掉后侧栏数字会跟着变。</p></div>
+          <div><h1>跟进任务</h1><p>今天 13 条。前 7 条是张子怡 11 月 23 日跟过、11 月 24 日还要续上的，日均消耗来自 11 月 17–23 日。后 6 条是今天加进来的，近 7 日导出没有消耗。勾掉后侧栏数字会跟着变。</p></div>
           <div class="stat"><b id="task-open">3</b><span>待确认</span></div>
         </div>
         <article class="card" id="task-list"></article>
@@ -529,7 +530,7 @@
 
       <section class="view" id="view-pipeline">
         <div class="page-head">
-          <div><h1>商机管理</h1><p>张子怡近 7 天正在推进的客户。新商机是还在开播或搭账户，方案沟通是在改计划和素材，谈判签约是客户在争效果或要停。改阶段后首页会同步。</p></div>
+          <div><h1>商机管理</h1><p>张子怡 11 月 23 日正在推进的客户。新商机是还在搭账户，方案沟通是在改计划和素材，谈判签约是客户在改出价或账户被限制。改阶段后首页会同步。</p></div>
           <div class="stat-row" id="pipe-stats"></div>
         </div>
         <div class="board" id="pipe-board"></div>
@@ -537,7 +538,7 @@
 
       <section class="view" id="view-wins">
         <div class="page-head">
-          <div><h1>成交记录</h1><p>张子怡这周跟过、近 7 日有下单的客户。下单用日均下单次数 × 7，不按签约金额计。</p></div>
+          <div><h1>成交记录</h1><p>张子怡 11 月 23 日本人跟过、近 7 日有下单的客户。下单用日均下单次数 × 7，不按签约金额计。</p></div>
           <div class="stat"><b id="win-sum">0 单</b><span id="win-count">0 个客户</span></div>
         </div>
         <article class="card">
@@ -552,7 +553,7 @@
 
       <section class="view" id="view-review">
         <div class="page-head">
-          <div><h1>数据复盘</h1><p>客户周期以已充值的 2,989 个账户为分母。已上线和出单用近 7 日日均消耗、日均下单次数。</p></div>
+          <div><h1>数据复盘</h1><p>客户周期以已充值的 2,989 个账户为分母。已上线和出单用 11 月 17–23 日的日均消耗、日均下单次数。</p></div>
         </div>
         <div class="grid-2">
           <article class="card">
@@ -571,7 +572,7 @@
             <div class="legend-inline"><span><i style="background:#CDB6F0"></i>日均消耗（万元）</span><span><i style="background:#6A4EBE;border-radius:99px"></i>日均下单次数</span></div>
           </div>
           <div class="chart-box" id="trend-2" data-trend></div>
-          <p class="footnote">分周从 10 月 5 日到 11 月 16 日。左轴是日均消耗，右轴是日均下单次数。有消耗的账户从 419 个增到 550 个，11 月 9 日那周最高，577 个。</p>
+          <p class="footnote">10 月 5 日到 11 月 16 日按自然周。11/17 这点是近 7 日，有消耗账户 552 个。11 月 9 日那周仍最高，577 个。</p>
         </article>
       </section>
 
@@ -617,10 +618,10 @@
     ];
     const FUNNEL = [
       { name: "已充值客户", n: 2989, hint: "消费品专项 2,908 · 直销自助 81", color: "#5C46B6", ink: "#fff" },
-      { name: "已上线客户", n: 557, hint: "近7日日均消耗大于 0", color: "#7058C8", ink: "#fff" },
-      { name: "已出10单客户", n: 141, hint: "近7日下单达到 10", color: "#8B74D6", ink: "#fff" },
-      { name: "已出100单客户", n: 42, hint: "近7日下单达到 100", color: "#B6A2E6", ink: "#3A2A5C" },
-      { name: "已出1000单客户", n: 4, hint: "近7日下单达到 1,000", color: "#D9CCF4", ink: "#3A2A5C" }
+      { name: "已上线客户", n: 552, hint: "11月17–23日日均消耗大于 0", color: "#7058C8", ink: "#fff" },
+      { name: "已出10单客户", n: 135, hint: "近7日下单达到 10", color: "#8B74D6", ink: "#fff" },
+      { name: "已出100单客户", n: 39, hint: "近7日下单达到 100", color: "#B6A2E6", ink: "#3A2A5C" },
+      { name: "已出1000单客户", n: 5, hint: "近7日下单达到 1,000", color: "#D9CCF4", ink: "#3A2A5C" }
     ];
     const TREND = [
       { m: "10/5", spend: 102001, orders: 4086, accounts: 419 },
@@ -629,7 +630,8 @@
       { m: "10/26", spend: 96296, orders: 3635, accounts: 496 },
       { m: "11/2", spend: 115463, orders: 4268, accounts: 550 },
       { m: "11/9", spend: 139463, orders: 3574, accounts: 577 },
-      { m: "11/16", spend: 100237, orders: 3463, accounts: 550 }
+      { m: "11/16", spend: 100237, orders: 3463, accounts: 550 },
+      { m: "11/17", spend: 111189, orders: 4031, accounts: 552 }
     ];
     const STAGES = [
       { name: "新商机", color: "#6A56C4" },
@@ -637,82 +639,62 @@
       { name: "谈判签约", color: "#9678B8" }
     ];
     const PIPELINE = [
-      ["d1","客户要退款",80,"张家界湘农哥","A","张子怡 · 环比 -33%","谈判签约","群里说没展现、要退款"],
-      ["d2","不认成交口径",562,"惠州德伟盛","A","张子怡 · 环比 -77%","谈判签约","客户说下单不是实际成交"],
-      ["d3","空烧后要重建",273,"蜀茗蒙山","C","张子怡 · 环比 -10%","谈判签约","计划删光，空烧后一单不出"],
-      ["s1","暂停计划要重开",1662,"邢台松霖","A","张子怡 · 近7日新起量","方案沟通","计划被手动暂停，异常解除后也不会自动开"],
-      ["s2","先把计划跑起来",1285,"北京中茶","A","张子怡 · 环比 -72%","方案沟通","先搭计划，卡住就发截图"],
-      ["s3","成本对着ROI看",304,"杭州果斗斗","A","张子怡 · 环比 -50%","方案沟通","两个项目成本不同，要和下单 ROI 一起看"],
-      ["s4","前3秒改开口",null,"上海藻安雅","E","张子怡 · 导出无消耗","方案沟通","近 7 日聊得最多，在改视频前 3 秒"],
-      ["s5","改考核目标",118,"四川铭纸坊","A","张子怡 · 环比 -89%","方案沟通","一个项目只留一个考核，优先净成交 ROI"],
-      ["s6","案例先做脱敏",827,"韩范男装","A","张子怡 · 环比 -35%","方案沟通","案例不展示店名，确认前不外发"],
-      ["s7","掉量排查已发",80,"义乌淼恺","C","张子怡 · 环比 -72%","方案沟通","近 3 天消耗较前 3 天降了约 68%"],
-      ["s8","冷启动改预算",33,"青岛云启星辰","D","张子怡 · 近7日新起量","方案沟通","投放约 10 天，日预算和时段都偏紧"],
-      ["s9","授权后才能查数",345,"连云港渔舟问月","A","张子怡 · 环比 -61%","方案沟通","账户已有消耗，群里还在等授权"],
-      ["n1","明天开播",null,"杭州奇迹联合","E","张子怡 · 导出无消耗","新商机","真人录屏留作商品素材，直播走数字人"],
-      ["n2","确认开播时间",null,"铭彬海产","E","张子怡 · 导出无消耗","新商机","还在问每天几点开播"],
-      ["n3","素材还没挂上",1,"宁波宝橙","D","张子怡 · 环比 -50%","新商机","计划刚建完，创意和视频还没挂"],
-      ["n4","在教剪映导片",null,"周氏养蜂","E","张子怡 · 导出无消耗","新商机","第一次用剪映，卡在相册权限"]
+      ["d1","降期望ROI并建CPA",497,"惠州德伟盛","D","张子怡 · 环比 -76%","谈判签约","期望 ROI 填了 14，投放到 11 月 30 日、只到晚上 8 点。客户问 CPA，已回全店托管"],
+      ["d2","店铺违规先申诉",311,"杭州果斗斗","C","张子怡 · 环比 -45%","谈判签约","客户说店铺违规、不让投了。申诉要在处罚下发后 7 日内"],
+      ["s3","先充值再补下单ROI",33,"连云港渔舟问月","C","张子怡 · 环比 -97%","方案沟通","余额是 0。已让先充值、打开计划、补一条下单 ROI。客户要海鲜案例"],
+      ["s4","按两成毛利重建",9,"四川铭纸坊","E","张子怡 · 环比 -99%","方案沟通","直播计划已结束。客户说毛利大约 20%，2.3 的下单 ROI 还在亏"],
+      ["s2","加创意并放开预算",217,"义乌顺诗","C","张子怡 · 环比 -32%","方案沟通","两个项目都在出单。已建议加创意、日预算放开、卖得好的品再开"],
+      ["s1","等账户ID对项目",725,"韩范男装","C","张子怡 · 环比 -40%","方案沟通","发了 15 个项目的截图，还分不清加减，在等账户 ID"],
+      ["n1","约好一起搭建",null,"连云港茂渔嘉","E","张子怡 · 导出无此账户","新商机","计划还没搭建，已约客户一起搭"],
+      ["n2","主播在播，教搭建",null,"宜城豪七对","E","张子怡 · 导出无此账户","新商机","客户要充 3000 测，主播正在播，问能不能教搭建。已回可以"]
     ].map(([id,title,amount,company,klass,owner,stage,basis]) => ({id,title,amount,company,klass,owner,stage,origin:stage,basis}));
 
     const FOLLOW = [
-      { id:"zaoanya", name:"上海藻安雅", klass:"E", date:"2026-11-22", time:"21:14", method:"群聊", content:"导出里没有消耗。前 3 秒在讲产品，建议改成真人痛点，产品放到第 5 秒。", owner:"张子怡", next:"2026-11-23", nextTime:"10:00", status:"进行中", intent:false, isNew:false, fixed:true },
-      { id:"yunqi", name:"青岛云启星辰", klass:"D", date:"2026-11-22", time:"10:44", method:"群聊", content:"日均 33 元，投放约 10 天还在冷启动。日预算改成不限，不要只投早上。", owner:"张子怡", next:"2026-11-23", nextTime:"11:00", status:"进行中", intent:true, isNew:false, fixed:true },
-      { id:"shuming", name:"蜀茗蒙山", klass:"C", date:"2026-11-22", time:"12:30", method:"群聊", content:"日均 273 元。计划删光后空烧约 700，新建账户已加白，要重新建计划。", owner:"张子怡", next:"2026-11-23", nextTime:"14:00", status:"待反馈", intent:false, isNew:false, fixed:true },
-      { id:"xiangnong", name:"张家界湘农哥", klass:"A", date:"2026-11-20", time:"22:35", method:"群聊", content:"日均 80 元，环比 -33%。素材被判相似，客户说没展现，要退款。", owner:"张子怡", next:"2026-11-23", nextTime:"10:30", status:"待反馈", intent:false, isNew:false, fixed:true },
-      { id:"guodoudou", name:"杭州果斗斗", klass:"A", date:"2026-11-20", time:"14:53", method:"群聊", content:"日均 304 元，环比 -50%。昨天没直播且余额见底，单成本要和下单 ROI 一起看。", owner:"张子怡", next:"2026-11-23", nextTime:"15:00", status:"进行中", intent:true, isNew:false, fixed:true },
-      { id:"mingzhifang", name:"四川铭纸坊", klass:"A", date:"2026-11-20", time:"16:33", method:"群聊", content:"日均 118 元，环比 -89%。在教下单 ROI 怎么填，冷启动先用下单把单量跑稳。", owner:"张子怡", next:"2026-11-24", nextTime:"11:00", status:"进行中", intent:true, isNew:false, fixed:true },
-      { id:"miaokai", name:"义乌淼恺", klass:"C", date:"2026-11-20", time:"20:30", method:"群聊", content:"日均 80 元，环比 -72%。已发近 3 天掉量排查，日均从 166 元降到 53 元。", owner:"张子怡", next:"2026-11-24", nextTime:"16:00", status:"已回访", intent:false, isNew:false, fixed:true },
-      { id:"xiduo", name:"喜朵百货", klass:"D", date:"2026-11-20", time:"12:16", method:"群聊", content:"日均 4 元。全店托管只能用主图，自己的视频要改单商品计划，素材当天要补上。", owner:"张子怡", next:"2026-11-23", nextTime:"16:00", status:"进行中", intent:true, isNew:false, fixed:true },
-      { id:"yuzhou", name:"连云港渔舟问月", klass:"A", date:"2026-11-19", time:"12:39", method:"群聊", content:"日均 345 元，环比 -61%。客户已加好友，授权链接只能私聊发。", owner:"张子怡", next:"2026-11-23", nextTime:"11:30", status:"待反馈", intent:false, isNew:false, fixed:true },
-      { id:"zhongcha", name:"北京中茶", klass:"A", date:"2026-11-18", time:"17:49", method:"群聊", content:"日均 1,285 元，环比 -72%。先搭托管和直播计划，方便时拉会对着数据看。", owner:"张子怡", next:"2026-11-24", nextTime:"15:00", status:"进行中", intent:true, isNew:false, fixed:true },
-      { id:"hanfan", name:"韩范男装", klass:"A", date:"2026-11-18", time:"15:15", method:"群聊", content:"日均 827 元，环比 -35%。案例不展示店名，确认前不外发。", owner:"张子怡", next:"2026-11-25", nextTime:"15:00", status:"待反馈", intent:false, isNew:false, fixed:true },
-      { id:"fushida", name:"上海孚食达", klass:"C", date:"2026-11-18", time:"13:14", method:"群聊", content:"日均 74 元。这个户下面没有广告，现金户是空的，要先把预存转到现金户。", owner:"张子怡", next:"2026-11-23", nextTime:"14:30", status:"待反馈", intent:false, isNew:false, fixed:true },
-      { id:"honghui", name:"广州弘辉", klass:"C", date:"2026-11-18", time:"14:42", method:"群聊", content:"日均 63 元。京东转链已经拿到，先拿两条创意试跑。", owner:"张子怡", next:"2026-11-24", nextTime:"11:00", status:"进行中", intent:true, isNew:false, fixed:true },
-      { id:"songlin", name:"邢台松霖", klass:"A", date:"2026-11-17", time:"16:32", method:"群聊", content:"日均 1,662 元。手动暂停的计划不会自动开，日预算先不限，一条创意放 5 条视频。", owner:"张子怡", next:"2026-11-23", nextTime:"10:00", status:"进行中", intent:true, isNew:false, fixed:true },
-      { id:"deweisheng", name:"惠州德伟盛", klass:"A", date:"2026-11-17", time:"11:00", method:"群聊", content:"日均 562 元，环比 -77%。出价到 70 仍没曝光，客户不认下单口径的 ROI。", owner:"张子怡", next:"2026-11-23", nextTime:"15:30", status:"待反馈", intent:false, isNew:false, fixed:true },
-      { id:"muqing", name:"广州沐清", klass:"C", date:"2026-11-17", time:"10:53", method:"群聊", content:"日均 171 元。先只跑竞价，艾米等这条出稳定单量再开。", owner:"张子怡", next:"2026-11-24", nextTime:"10:30", status:"进行中", intent:true, isNew:false, fixed:true }
+      { id:"deweisheng", name:"惠州德伟盛", klass:"D", date:"2026-11-23", time:"16:11", method:"群聊", content:"日均 497 元，环比 -76%。已建议把期望 ROI 从 14 降下来，投放改全天，结束日拉过 11 月 30 日。客户问 CPA，已回全店托管，转化选下单 ROI 和净成交 ROI，只能推店铺。", owner:"张子怡", next:"2026-11-24", nextTime:"09:00", status:"进行中", intent:true, isNew:true, fixed:true },
+      { id:"yuzhou", name:"连云港渔舟问月", klass:"C", date:"2026-11-23", time:"16:13", method:"群聊", content:"日均 33 元，环比 -97%。余额是 0。已让先充值再打开计划，并补一条下单 ROI。客户晚上要海鲜案例。", owner:"张子怡", next:"2026-11-24", nextTime:"10:00", status:"待反馈", intent:true, isNew:true, fixed:true },
+      { id:"maoyujia", name:"连云港茂渔嘉", klass:"E", date:"2026-11-23", time:"10:55", method:"群聊", content:"近 7 日导出里没有这个账户。计划还没搭建，已约客户一起搭。", owner:"张子怡", next:"2026-11-24", nextTime:"10:30", status:"进行中", intent:true, isNew:true, fixed:true },
+      { id:"mingzhifang", name:"四川铭纸坊", klass:"E", date:"2026-11-23", time:"14:32", method:"群聊", content:"日均 9 元，环比 -99%。直播计划已结束，要重建。客户说毛利大约 20%，2.3 的下单 ROI 还在亏。", owner:"张子怡", next:"2026-11-24", nextTime:"11:00", status:"进行中", intent:true, isNew:true, fixed:true },
+      { id:"guodoudou", name:"杭州果斗斗", klass:"C", date:"2026-11-23", time:"15:51", method:"群聊", content:"日均 311 元，环比 -45%。客户说店铺违规、不让投了。已让投放助手别插话。", owner:"张子怡", next:"2026-11-24", nextTime:"14:00", status:"待反馈", intent:false, isNew:true, fixed:true },
+      { id:"haoqidui", name:"宜城豪七对", klass:"E", date:"2026-11-23", time:"14:36", method:"群聊", content:"近 7 日导出里没有这个账户。客户要充 3000 测，主播正在播，问能不能教搭建。已回可以。", owner:"张子怡", next:"2026-11-24", nextTime:"15:00", status:"进行中", intent:true, isNew:true, fixed:true },
+      { id:"shunshi", name:"义乌顺诗", klass:"C", date:"2026-11-23", time:"10:12", method:"群聊", content:"日均 217 元，环比 -32%。两个项目都在出单。已建议继续加创意、日预算放开、卖得好的品再开新项目。", owner:"张子怡", next:"2026-11-24", nextTime:"16:00", status:"待反馈", intent:true, isNew:true, fixed:true },
+      { id:"hongxin", name:"鸿鑫云鼎", klass:"", date:"2026-11-24", time:"14:08", method:"群聊", content:"账户 94395336。近 7 日导出没有这个账户。张子怡 14:08 邀了当天 15:30 的直播课，并建议用妙思做素材。", owner:"张子怡", next:"2026-11-24", nextTime:"15:30", status:"进行中", intent:true, isNew:true, fixed:true },
+      { id:"doubao", name:"重庆抖爆科技", klass:"", date:"2026-11-24", time:"14:07", method:"群聊", content:"账户 96188088。近 7 日导出没有这个账户。11 月 20 日说周一正式启动，再充 2 万。今天 14:07 张子怡邀了 15:30 直播课。", owner:"张子怡", next:"2026-11-24", nextTime:"15:30", status:"进行中", intent:true, isNew:true, fixed:true },
+      { id:"nonggu", name:"潍坊农谷智投", klass:"A", date:"2026-11-24", time:"11:01", method:"群聊", content:"账户 95632884。全域通跃迁，首充 1,000。近 7 日导出无消耗。11:01 刘舒杭把运营群发给老板。", owner:"刘舒杭", next:"2026-11-24", nextTime:"", status:"进行中", intent:true, isNew:true, fixed:true },
+      { id:"puhua", name:"上海普华商贸", klass:"A", date:"2026-11-20", time:"17:10", method:"群聊", content:"账户 95038197。全域通跃迁，首充 2,000。近 7 日导出无消耗。11 月 20 日约了周一下午 2 点搭建大米直播计划，群里之后没有续上。", owner:"梁草宽", next:"2026-11-24", nextTime:"", status:"进行中", intent:true, isNew:true, fixed:true },
+      { id:"wanxini", name:"济南万希尼", klass:"", date:"2026-11-24", time:"14:07", method:"群聊", content:"账户 96252497。近 7 日导出没有这个账户。11 月 20 日客户在问全店托管怎么搭。今天 14:07 张子怡邀了 15:30 直播课。", owner:"张子怡", next:"2026-11-24", nextTime:"15:30", status:"进行中", intent:true, isNew:true, fixed:true },
+      { id:"minze", name:"青海民泽龙羊峡", klass:"A", date:"2026-11-23", time:"11:24", method:"群聊", content:"账户 94479099。全域通跃迁，首充 50,000。近 7 日导出无消耗。11 月 23 日发了小店单链路智投、直播间、下单。", owner:"梁草宽", next:"2026-11-24", nextTime:"", status:"进行中", intent:true, isNew:true, fixed:true },
+      { id:"hanfan", name:"韩范男装", klass:"C", date:"2026-11-23", time:"11:48", method:"群聊", content:"日均 725 元，环比 -40%。发了项目列表截图。15 个项目分不清加减，还在等客户发账户 ID。", owner:"张子怡", next:"2026-11-25", nextTime:"15:00", status:"待反馈", intent:false, isNew:true, fixed:true },
+      { id:"delang", name:"揭阳德朗", klass:"E", date:"2026-11-23", time:"10:40", method:"群聊", content:"日均 0 元。客户说一直在盯。已让投放助手别插话。", owner:"张子怡", next:"2026-11-25", nextTime:"10:30", status:"已回访", intent:false, isNew:true, fixed:true }
     ];
     const LEADS = [
-      { name:"杭州奇迹联合", stage:"待开播", origin:"待开播", source:"明天开播。真人录屏留作商品素材，直播走数字人。", date:"2026-11-17", owner:"张子怡" },
-      { name:"铭彬海产", stage:"待开播", origin:"待开播", source:"还在确认每天几点开播。导出无消耗。", date:"2026-11-22", owner:"张子怡" },
-      { name:"重庆抖爆", stage:"待开播", origin:"待开播", source:"说好周一启动前有要看的再发。导出无消耗。", date:"2026-11-20", owner:"张子怡" },
-      { name:"周氏养蜂", stage:"待搭建", origin:"待搭建", source:"第一次用剪映，卡在相册权限。导出无消耗。", date:"2026-11-21", owner:"张子怡" },
-      { name:"宁波宝橙", stage:"待搭建", origin:"待搭建", source:"计划刚建完，创意和视频还没挂。日均 1 元。", date:"2026-11-20", owner:"张子怡" },
-      { name:"海门福易", stage:"待搭建", origin:"待搭建", source:"影棚还没出片。导出无消耗。", date:"2026-11-18", owner:"张子怡" },
-      { name:"南宫爱诗晴", stage:"待搭建", origin:"待搭建", source:"现金户要先补上，计划才能跑。导出无消耗。", date:"2026-11-19", owner:"张子怡" },
-      { name:"福州森岸", stage:"待搭建", origin:"待搭建", source:"全店托管只有商品信息，缺真人实拍素材。导出无消耗。", date:"2026-11-20", owner:"张子怡" },
-      { name:"贵阳米迎", stage:"已沟通", origin:"已沟通", source:"要看截图，才能判断是同步卡住还是入口选错。导出无消耗。", date:"2026-11-22", owner:"张子怡" },
-      { name:"成都梵星豪斯", stage:"已沟通", origin:"已沟通", source:"账户类型已经选对。导出无消耗。", date:"2026-11-21", owner:"张子怡" }
+      { name:"连云港茂渔嘉", stage:"待搭建", origin:"待搭建", source:"计划还没搭建，已约一起搭。近 7 日导出里没有这个账户。", date:"2026-11-23", owner:"张子怡" },
+      { name:"宜城豪七对", stage:"待搭建", origin:"待搭建", source:"客户要充 3000 测，主播正在播，问能不能教搭建。已回可以。导出里没有这个账户。", date:"2026-11-23", owner:"张子怡" },
+      { name:"揭阳德朗", stage:"已沟通", origin:"已沟通", source:"日均 0 元。客户说一直在盯。已让投放助手别插话。", date:"2026-11-23", owner:"张子怡" }
     ];
     let TASKS = [
-      { id:"t1", time:"09:00", title:"洁尔阴消耗 -51%", account:"93283210", owner:"刘舒杭 · 跃迁 · 日均 3,082", customer:"", pending:true, color:"#7C5CBF" },
-      { id:"t2", time:"10:30", title:"北京中茶消耗 -72%", account:"76252170", owner:"直销自助 · 日均 1,285", customer:"", pending:true, color:"#C45B8A" },
-      { id:"t3", time:"13:30", title:"捷护佳消耗 -51%", account:"55692943", owner:"直营重点 · 日均 2,396", customer:"", pending:true, color:"#C4A35A" },
-      { id:"t4", time:"15:00", title:"德伟盛消耗 -77%", account:"93280253", owner:"郭家欣 · 跃迁 · 日均 562", customer:"", pending:true, color:"#7C5CBF" },
-      { id:"t5", time:"16:00", title:"妙蟹阁消耗 -74%", account:"95035731", owner:"郭家欣 · 跃迁 · 首充 2 万", customer:"", pending:true, color:"#6E8BB8" },
-      { id:"t6", time:"16:30", title:"渔舟问月消耗 -61%", account:"94889376", owner:"郭家欣 · 跃迁 · 首充 5 万", customer:"", pending:true, color:"#D48BB8" },
-      { id:"t7", time:"17:30", title:"自然堂消耗 -93%", account:"77011257", owner:"直营重点 · 日均 140", customer:"", pending:true, color:"#8E86A8" }
+      { id:"t1", time:"09:00", title:"德伟盛看改价和CPA", account:"93280253", owner:"张子怡 · 日均 497 · 环比 -76%", customer:"", pending:true, color:"#7C5CBF" },
+      { id:"t2", time:"10:00", title:"渔舟问月确认充值", account:"94889376", owner:"张子怡 · 日均 33 · 环比 -97%", customer:"", pending:true, color:"#D48BB8" },
+      { id:"t3", time:"10:30", title:"茂渔嘉一起搭建", account:"94223052", owner:"张子怡 · 导出无此账户", customer:"", pending:true, color:"#C45B8A" },
+      { id:"t4", time:"11:00", title:"铭纸坊按毛利重建", account:"95458800", owner:"张子怡 · 日均 9 · 环比 -99%", customer:"", pending:true, color:"#C4A35A" },
+      { id:"t5", time:"14:00", title:"果斗斗跟申诉", account:"94094383", owner:"张子怡 · 日均 311 · 环比 -45%", customer:"", pending:true, color:"#6E8BB8" },
+      { id:"t6", time:"15:00", title:"豪七对教搭建", account:"96412417", owner:"张子怡 · 导出无此账户", customer:"", pending:true, color:"#8E86A8" },
+      { id:"t8", time:"15:30", title:"鸿鑫云鼎看是否入会", account:"94395336", owner:"张子怡 · 近7日导出无此账户", customer:"", pending:true, color:"#7C5CBF" },
+      { id:"t9", time:"15:30", title:"抖爆科技看是否入会", account:"96188088", owner:"张子怡 · 11月20日说周一再充2万", customer:"", pending:true, color:"#D48BB8" },
+      { id:"t12", time:"15:30", title:"万希尼看是否入会", account:"96252497", owner:"张子怡 · 11月20日在搭全店托管", customer:"", pending:true, color:"#C45B8A" },
+      { id:"t7", time:"16:00", title:"顺诗看素材和预算", account:"94651809", owner:"张子怡 · 日均 217 · 环比 -32%", customer:"", pending:true, color:"#7C5CBF" },
+      { id:"t10", time:"今天", title:"农谷智投接上运营群", account:"95632884", owner:"刘舒杭 · 跃迁 · 导出无消耗", customer:"", pending:true, color:"#6E8BB8" },
+      { id:"t11", time:"今天", title:"普华商贸补搭建", account:"95038197", owner:"梁草宽 · 跃迁 · 约了周一未续", customer:"", pending:true, color:"#C4A35A" },
+      { id:"t13", time:"今天", title:"民泽看智投计划", account:"94479099", owner:"梁草宽 · 跃迁 · 导出无消耗", customer:"", pending:true, color:"#8E86A8" }
     ];
     const REMINDERS = [
-      { id:"xiangnong", name:"张家界湘农哥", due:"2026-11-23", when:"10:30", level:"退款", color:"#C45B8A", note:"20 日说没展现、要退款 · 已隔 3 天", fixed:true },
-      { id:"songlin", name:"邢台松霖", due:"2026-11-23", when:"10:00", level:"停投", color:"#7C5CBF", note:"17 日计划被手动暂停 · 已隔 6 天", fixed:true },
-      { id:"fushida", name:"上海孚食达", due:"2026-11-23", when:"14:30", level:"资金", color:"#C4A35A", note:"18 日现金户是空的 · 已隔 5 天", fixed:true },
-      { id:"guodoudou", name:"杭州果斗斗", due:"2026-11-23", when:"15:00", level:"余额", color:"#C45B8A", note:"20 日余额见底 · 已隔 3 天", fixed:true },
-      { id:"shuming", name:"蜀茗蒙山", due:"2026-11-23", when:"14:00", level:"重建", color:"#7C5CBF", note:"22 日计划删光，要重新建", fixed:true },
-      { id:"xiduo", name:"喜朵百货", due:"2026-11-23", when:"16:00", level:"素材", color:"#8E86A8", note:"20 日自己的视频还没挂上 · 已隔 3 天", fixed:true },
-      { id:"yunqi", name:"青岛云启星辰", due:"2026-11-23", when:"11:00", level:"冷启动", color:"#6E8BB8", note:"22 日日预算还卡着，投放约 10 天", fixed:true },
-      { id:"zaoanya", name:"上海藻安雅", due:"2026-11-23", when:"10:00", level:"素材", color:"#B197C8", note:"22 日晚前 3 秒还在讲产品", fixed:true }
+      { id:"hanfan", name:"韩范男装", due:"2026-11-24", when:"15:00", level:"等账户", color:"#7C5CBF", note:"昨天发了 15 个项目截图，还没拿到账户 ID", fixed:true }
     ];
     const WINS = [
-      { name:"邢台松霖", project:"日均消耗 1,662 元。计划被手动暂停。", orders:2182, date:"2026-11-17", owner:"张子怡" },
-      { name:"靖西尚贝", project:"日均消耗 166 元。还没加投，卡住再看。", orders:231, date:"2026-11-19", owner:"张子怡" },
-      { name:"韩范男装", project:"日均消耗 827 元。案例不展示店名。", orders:164, date:"2026-11-18", owner:"张子怡" },
-      { name:"杭州果斗斗", project:"日均消耗 304 元。两个项目都有下单。", orders:130, date:"2026-11-20", owner:"张子怡" },
-      { name:"连云港渔舟问月", project:"日均消耗 345 元。已有下单，授权还在私聊。", orders:109, date:"2026-11-19", owner:"张子怡" },
-      { name:"广州弘辉", project:"日均消耗 63 元。京东链路先拿两条创意试跑。", orders:106, date:"2026-11-18", owner:"张子怡" },
-      { name:"义乌淼恺", project:"日均消耗 80 元。已发掉量排查。", orders:56, date:"2026-11-20", owner:"张子怡" },
-      { name:"四川铭纸坊", project:"日均消耗 118 元。冷启动先把下单跑稳。", orders:24, date:"2026-11-20", owner:"张子怡" }
+      { name:"韩范男装", project:"日均消耗 725 元。还在等账户 ID，才能对 15 个项目。", orders:151, date:"2026-11-23", owner:"张子怡" },
+      { name:"杭州果斗斗", project:"日均消耗 311 元。店铺违规后先走申诉。", orders:133, date:"2026-11-23", owner:"张子怡" },
+      { name:"义乌顺诗", project:"日均消耗 217 元。两个项目都在出单，建议加创意、放开预算。", orders:114, date:"2026-11-23", owner:"张子怡" },
+      { name:"连云港渔舟问月", project:"日均消耗 33 元。余额是 0，先充值。", orders:10, date:"2026-11-23", owner:"张子怡" },
+      { name:"惠州德伟盛", project:"日均消耗 497 元。期望 ROI 14，已建议降下来。", orders:4, date:"2026-11-23", owner:"张子怡" }
     ];
 
     const FILTERS = [
@@ -724,7 +706,7 @@
     let followFilter = "all";
     let classFilter = "";
     let leadFilter = "全部";
-    let trendN = 7;
+    let trendN = 8;
     let query = "";
 
     function esc(s) {
@@ -902,7 +884,7 @@
       const rows = followRows();
       document.getElementById("follow-body").innerHTML = rows.length ? rows.map((row) => `<tr>
         <td><button class="name-btn" type="button" data-customer="${row.id}">${esc(row.name)}</button></td>
-        <td><span class="pill ${row.klass}">${row.klass}类</span></td>
+        <td>${row.klass ? `<span class="pill ${row.klass}">${row.klass}类</span>` : ""}</td>
         <td class="num">${followWhen(row, row.date).slice(5)} ${row.time}</td>
         <td>${esc(row.method)}</td>
         <td>${esc(row.content)}</td>
@@ -911,7 +893,7 @@
         <td><span class="status ${statusClass(row.status)}">${esc(row.status)}</span></td>
         <td><button class="text-btn" type="button" data-customer="${row.id}">详情</button></td>
       </tr>`).join("") : `<tr><td colspan="9" class="empty">没有匹配的跟进记录</td></tr>`;
-      document.getElementById("follow-note").textContent = `这是张子怡 11 月 17–22 日的群跟进。群名里的账户对上近 7 日导出，内容里的日均消耗来自那份表。今日跟进是还要在 11 月 23 日续上的。`;
+      document.getElementById("follow-note").textContent = `前 9 条是张子怡 11 月 23 日群里说过、11 月 24 日还要续的客户，日均消耗来自 11 月 17–23 日导出。后 6 条是 11 月 24 日加进今日跟进的客户，近 7 日导出里没有消耗。`;
     }
 
     function paintLeads() {
@@ -940,7 +922,7 @@
         const pct = step.n == null ? 0 : step.n / MONITOR_ACCOUNTS * 100;
         const value = step.n == null ? "待查" : `${step.n.toLocaleString("zh-CN")}<br><small style="color:#7D7394">${pct.toFixed(1)}%</small>`;
         return `<div class="conv-row"><b>${esc(step.name)}</b><div class="bar"><i style="width:${pct.toFixed(1)}%"></i></div><span class="num">${value}</span></div>`;
-      }).join("") + `<p class="footnote">已充值 ${MONITOR_ACCOUNTS.toLocaleString("zh-CN")} 个账户来自客户进展表。后四档来自近 7 日导出，分母仍是这 ${MONITOR_ACCOUNTS.toLocaleString("zh-CN")} 个账户。已上线为日均消耗大于 0。出单用日均下单次数 × 7，达到 10、100、1,000 单。导出覆盖其中 655 个账户，其余账户在这份导出里没有消耗记录。</p>`;
+      }).join("") + `<p class="footnote">已充值 ${MONITOR_ACCOUNTS.toLocaleString("zh-CN")} 个账户来自客户进展表，这份导出没有重算。后四档来自 11 月 17–23 日导出，分母仍是这 ${MONITOR_ACCOUNTS.toLocaleString("zh-CN")} 个账户。已上线为日均消耗大于 0。出单用日均下单次数 × 7，达到 10、100、1,000 单。导出覆盖其中 655 个账户，其中 552 个有消耗。</p>`;
       document.getElementById("stackbar").innerHTML = SEGMENTS.map((s) => `<span style="width:${s.n / TOTAL * 100}%;background:${s.color}" title="${s.name} ${(s.n / TOTAL * 100).toFixed(1)}%"></span>`).join("");
       document.getElementById("stack-legend").innerHTML = SEGMENTS.map((s) => `<div class="legend-row"><i class="swatch" style="background:${s.color}"></i><div><b>${s.name}</b> <span>${s.desc}</span></div><strong>${s.n.toLocaleString("zh-CN")}</strong><span>${(s.n / TOTAL * 100).toFixed(1)}%</span></div>`).join("");
       document.getElementById("tag-grid").innerHTML = SEGMENTS.map((s) => `<button class="card tag-card" type="button" data-class="${s.key}"><div class="band" style="background:${s.color}"></div><div class="pad"><b>${s.name}</b><div class="who">${s.desc}</div><strong>${s.n.toLocaleString("zh-CN")}</strong><span class="who">占 ${(s.n / TOTAL * 100).toFixed(1)}%</span></div></button>`).join("");
@@ -997,7 +979,7 @@
       const body = row ? `
         <h3 id="drawer-title">${esc(row.name)}</h3>
         <div class="kv">
-          <span>类型</span><b><span class="pill ${row.klass}">${row.klass}类</span>${row.intent ? " · 高意向" : ""}</b>
+          <span>类型</span><b>${row.klass ? `<span class="pill ${row.klass}">${row.klass}类</span>` : "分层表里没有"}${row.intent ? " · 高意向" : ""}</b>
           <span>跟进人</span><b>${esc(row.owner)}</b>
           <span>最近跟进</span><b>${followWhen(row, row.date).slice(5)} ${row.time} · ${esc(row.method)}</b>
           <span>内容</span><b>${esc(row.content)}</b>
@@ -1152,9 +1134,9 @@
       TASKS.forEach((t) => { t.pending = true; });
       PIPELINE.forEach((p) => { p.stage = p.origin; });
       LEADS.forEach((l) => { l.stage = l.origin; });
-      followFilter = "all"; classFilter = ""; leadFilter = "全部"; trendN = 7; query = "";
+      followFilter = "all"; classFilter = ""; leadFilter = "全部"; trendN = 8; query = "";
       document.getElementById("q").value = "";
-      document.getElementById("trend-range").value = "7";
+      document.getElementById("trend-range").value = "8";
       document.getElementById("display-name").value = "小A";
       document.getElementById("user-name").textContent = "小A";
       document.getElementById("user-name-2").textContent = "小A";
